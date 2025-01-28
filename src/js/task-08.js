@@ -4,12 +4,14 @@ registerForm.addEventListener("submit", handleSubmit);
 const obj = {};
 
 function handleSubmit(event) {
-    event.preventDefault();
-    obj.login = event.target.elements.email.value;
-    obj.password = event.target.elements.password.value;
+  event.preventDefault();
+  obj.login = event.target.elements.email.value;
+  obj.password = event.target.elements.password.value;
 
   if (obj.login === "" || obj.password === "") {
-    return console.log("Please fill in all the fields!");
+    alert("Please fill in all the fields!");
+    return;
+     
   }
 
   console.log(`Login: ${obj.login}, Password: ${obj.password}`);
